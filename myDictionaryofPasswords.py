@@ -10,4 +10,6 @@ my_dictionary_of_passwords[siteRequestingPassword] = password
 
 print(my_dictionary_of_passwords)
 
+#Need to write each new entry to a file so it stores this info to be accessed as needed. 
+
 
