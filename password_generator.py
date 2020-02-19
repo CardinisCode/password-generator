@@ -18,7 +18,7 @@ def password_maker(user_chosen_words, user_chosen_characters, howManyNumbers):
     list_of_words = user_chosen_words.split()
     list_of_characters = user_chosen_characters.split()
 
-    for word in range(0, len(list_of_words)):
+    for i in range(0, len(list_of_words)):
         randomWord = random.choice(list_of_words)
         random_password += randomWord
         list_of_words.remove(randomWord)
@@ -26,14 +26,14 @@ def password_maker(user_chosen_words, user_chosen_characters, howManyNumbers):
 
     print("After the first loop, my random password looks like this:", random_password)
 
-    for character in range(0, len(list_of_characters)):
+    for i in range(0, len(list_of_characters)):
         randomChar = random.choice(list_of_characters)
         random_password += randomChar
         list_of_characters.remove(randomChar)
     
     print("After adding characters to my password, it now looks like this:", random_password)
     
-    for number in range(0, int(howManyNumbers) + 1):
+    for i in range(0, int(howManyNumbers) + 1):
         randomNumber = random.choice(list_of_numbers)
         random_password += str(randomNumber)
         list_of_numbers.remove(randomNumber)
@@ -44,23 +44,23 @@ def password_maker(user_chosen_words, user_chosen_characters, howManyNumbers):
     random.shuffle(shuffle_my_password)
     print(shuffle_my_password)
 
-    my_new_password = ""
-    for i in shuffle_my_password: 
-        my_new_password += ''.join(i)
-
     return my_new_password
 
+chosenWords = "Halo pink dragons"
+chosenCharacters = "@ $"
+howManyNumbers = "2"
 
-print("Please think of a few words of your choosing for your password")
-chosenWords = input("Please provide your chosen words, seperated by spaces: ")
-print("To confirm, your chosen words are:", chosenWords)
-print()
-print("Now think of the random characters you'd like to add to your password. ")
-chosenCharacters = input("Please provide 2 special characters of your choice, seperated by spaces: ")
-print("To confirm your special Characters are:", chosenCharacters)
-print()
-howManyNumbers = input("How many numbers would you like to add to your password? ")
-print("To confirm you would like", howManyNumbers, "In your password.")
 
-print(password_maker(chosenWords,chosenCharacters, howManyNumbers))
+#print("Please think of a few words of your choosing for your password")
+#chosenWords = input("Please provide your chosen words, seperated by spaces: ")
+#print("To confirm, your chosen words are:", chosenWords)
+#print()
+#print("Now think of the random characters you'd like to add to your password. ")
+#chosenCharacters = input("Please provide 2 special characters of your choice, seperated by spaces: ")
+#print("To confirm your special Characters are:", chosenCharacters)
+#print()
+#howManyNumbers = input("How many numbers would you like to add to your password? ")
+#print("To confirm you would like", howManyNumbers, "In your password.")
+
+#print(password_maker(chosenWords,chosenCharacters, howManyNumbers))
 
